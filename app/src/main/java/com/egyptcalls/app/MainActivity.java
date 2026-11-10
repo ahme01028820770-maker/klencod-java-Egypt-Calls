@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
     private void setStatus(String msg, boolean ok) {
         mainHandler.post(() -> {
             tvStatus.setText(msg);
-            tvStatus.setTextColor(getResources().getColor(ok ? R.color.accent : R.color.danger, null));
+            // تم إصلاح مشكلة اللون هنا (شيلنا null)
+            tvStatus.setTextColor(getResources().getColor(ok ? R.color.accent : R.color.danger));
         });
     }
 
@@ -237,7 +238,6 @@ public class MainActivity extends AppCompatActivity {
     private int[] spamAsia(String phone, int count, String message) {
         int ok = 0, fail = 0;
         String local = phone.replace("+20", "0");
-        // same base64 as python: 2ZjZrNmA
         String pkg = new String(android.util.Base64.decode("2ZjZrNmA", android.util.Base64.DEFAULT));
         for (int i = 0; i < Math.min(count, 100); i++) {
             HttpURLConnection conn = null;
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
         if (busy) return;
         String raw = etPhone.getText().toString().trim();
         if (raw.isEmpty()) {
-            Toast.makeText(this, "اكتب الرقم", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "اكتب الرقم", Toast.LENGTH_SHORT).show();
             return;
         }
         String phone = normalizeEgypt(raw);
@@ -297,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
         if (busy) return;
         String raw = etPhone.getText().toString().trim();
         if (raw.isEmpty()) {
-            Toast.makeText(this, "اكتب الرقم أو الإيميل", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "اكتب الرقم أو الإيميل", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -346,7 +346,6 @@ public class MainActivity extends AppCompatActivity {
                 r = spamTelegram(finalPhone, finalCount);
                 setStatus("✅ تيليجرام\nنجاح: " + r[0] + " · فشل: " + r[1], true);
             } else {
-                // asia - message empty for now
                 r = spamAsia(finalPhone, finalCount, "test");
                 setStatus("✅ آسيا\nنجاح: " + r[0] + " · فشل: " + r[1], true);
             }
