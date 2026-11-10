@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ألوان التطبيق الأساسية -->
     <color name="ic_launcher_background">#006B3F</color>
     <color name="bg">#F5F5F5</color>
     <color name="text">#333333</color>
     <color name="muted">#888888</color>
     <color name="accent">#006B3F</color>
+    
+    <!-- لون الخطأ اللي كان ناقص -->
+    <color name="danger">#FF0000</color>
 </resources>
