@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layoutDirection="rtl">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🇪🇬"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Egypt Calls"
+            android:textColor="@color/accent"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مكالمات مصر · 010 011 012 015"
+            android:textColor="@color/muted"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Phone -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="رقم الموبايل المصري"
+            android:textColor="@color/muted"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input"
+            android:hint="01012345678"
+            android:textColorHint="@color/muted"
+            android:textColor="@color/text"
+            android:inputType="phone"
+            android:paddingHorizontal="16dp"
+            android:textSize="16sp"
+            android:maxLength="15"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Count -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عدد المرات (للسبام)"
+            android:textColor="@color/muted"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etCount"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input"
+            android:hint="5"
+            android:text="5"
+            android:textColorHint="@color/muted"
+            android:textColor="@color/text"
+            android:inputType="number"
+            android:paddingHorizontal="16dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="📞  إرسال مكالمة"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg"
+            android:background="@drawable/bg_btn"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnEther"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔥  سبام اثير"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:background="@drawable/bg_btn_outline"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnTelegram"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="✈️  سبام تيليجرام"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:background="@drawable/bg_btn_outline"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="✉️  سبام جيميل"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:background="@drawable/bg_btn_outline"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnAsia"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🌏  سبام آسيا"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:background="@drawable/bg_btn_outline"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="جاهز"
+            android:textColor="@color/muted"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/bg_input"
+            android:minHeight="60dp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+</ScrollView>
