@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.EgyptCalls" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">#006B3F</item>
+        <item name="android:colorPrimaryDark">#004D2C</item>
+        <item name="android:colorAccent">#CE1126</item>
+        <item name="android:statusBarColor">#004D2C</item>
+    </style>
+</resources>
